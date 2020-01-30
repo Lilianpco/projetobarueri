@@ -28,17 +28,44 @@ class EnderecoForm(forms.ModelForm):
 
     class Meta:
         model = Endereco
-        fields = '__all__'
+        fields = [
+            'logradouro',
+            'numero',
+            'complemento',
+            'cidade',
+            'estado',
+            'cep',
+            'usuario'
+        ]
 
 
 class AcessibilidadeForm(forms.ModelForm):
 
     class Meta:
         model = Acessibilidade
-        fields = '__all__'
+        fields = [
+            'outros_tipos_deficiencia',
+            'tipo_deficiencia',
+            'cid',
+            'protese',
+            'restricao_fisica',
+            'tecnologia'
+        ]
 
 class Avaliacao_SecretariaForm(forms.ModelForm):
 
     class Meta:
         model = Avaliacao_Secretaria
-        fields = '__all__'
+        fields = [
+            'data_da_avaliacao',
+            'nome_do_trabalhador',
+            'telefone',
+            'nome_da_empresa',
+            'contratacao',
+            'cargo_funcao',
+            'atividade_realizada',
+            'adaptacao_local_de_trabalho',
+            'atencao_limitacoes_habilidades',
+            'relacionamento_chefia',
+            'relacionamento_colegas'
+        ]

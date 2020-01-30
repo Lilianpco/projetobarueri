@@ -22,7 +22,7 @@ class PessoaFisica(User):
         ("SOLTEIRO(A)", "Solteiro(a)"),
         ("CASADO(A)", "Casado(a)"),
         ("DIVORCIADO(A)", "Divociado(a)"),
-        ("VIÙVO(A)", "Viúvo(a)")
+        ("VIÙVO(A)", "Viúvo(a)"),
         
     )
     estado_civil = models.CharField(verbose_name = "Estado Civil", choices=estado, max_length=255, default=True)
