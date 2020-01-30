@@ -33,3 +33,7 @@ resposta = (
 (True, 'Sim'),
 (False, 'Não')
 )
+
+avaliacao = (
+    (1, '1')
+)

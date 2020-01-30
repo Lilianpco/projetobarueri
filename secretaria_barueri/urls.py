@@ -7,4 +7,5 @@ urlpatterns = [
     path('cadastro/pf/acessibilidade', acessibilidade_cadastro),
     path('cadastro/pj', cadastrar_empresa),
     path('admin/', admin.site.urls),
+    path('avaliacao/', )
 ]

@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-from choices import *
-import timezone
+from .choices import *
+import datetime
 
 class PessoaFisica(User):
     class Meta:
@@ -34,7 +34,7 @@ class PessoaFisica(User):
     telefone = models.CharField(verbose_name ="Telefone", choices=telefones, max_length=13, default=True)
     numero= models.CharField(verbose_name="Numero", max_length=13)
     ativo = models.BooleanField(default=False)
-    criado_em = models.DateField(default= timezone.now, verbose_name = "Criado", max_length=255)        
+    criado_em = models.DateField(auto_now=True, verbose_name = "Criado")        
 
 class PessoaJuridica(User):
     nome_fantasia = models.CharField(max_length=255, verbose_name='Nome fantasia da empresa')
